@@ -3,14 +3,10 @@
 {
 "FROM":
 [
-"ZR_AGENCY",
-"ZR_CUSTOMER",
-"ZR_TRAVEL"
+"/DMO/AGENCY"
 ],
 "ASSOCIATED":
-[
-"ZR_TRAVEL_STATUS_T"
-],
+[],
 "BASE":
 [],
 "ANNO_REF":

@@ -7,11 +7,16 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
-define view entity ZI_TRAVEL_BOOKINGS as select from ZR_TRAVEL as Travel
+define root view entity ZI_TRAVEL_BOOKINGS as select from ZR_TRAVEL as Travel
+association [0..1] to ZR_AGENCY as _Agency on _Agency.AgencyId = Travel.AgencyId
+association [0..1] to ZR_CUSTOMER as _Customer on _Customer.CustomerId = Travel.CustomerId
+association [0..*] to ZR_TRAVEL_STATUS_T as _StatusText on _StatusText.Status = Travel.Status 
 {
   key Travel.TravelId,
   Travel.AgencyId,
+  _Agency.Name as AgencyName,
   Travel.CustomerId,
+  concat( _Customer.LastName, _Customer.FirstName ) as CustomerName,
   Travel.BeginDate,
   Travel.EndDate,
   @Semantics.amount.currencyCode: 'CurrencyCode'
@@ -20,5 +25,8 @@ define view entity ZI_TRAVEL_BOOKINGS as select from ZR_TRAVEL as Travel
   Travel.TotalPrice,
   Travel.CurrencyCode,
   Travel.Description,
-  Travel.Status
+  @UI.hidden: true
+  Travel.Status,
+  
+  _StatusText
 }
