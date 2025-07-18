@@ -16,7 +16,9 @@ association [0..*] to ZR_TRAVEL_STATUS_T as _StatusText on _StatusText.Status = 
   Travel.AgencyId,
   _Agency.Name as AgencyName,
   Travel.CustomerId,
-  concat( _Customer.LastName, _Customer.FirstName ) as CustomerName,
+  _Customer.LastName as CustomerLastName,
+  _Customer.FirstName as CustomerFirstName,
+  concat_with_space( _Customer.FirstName, _Customer.LastName, 1 ) as CustomerName,
   Travel.BeginDate,
   Travel.EndDate,
   @Semantics.amount.currencyCode: 'CurrencyCode'
