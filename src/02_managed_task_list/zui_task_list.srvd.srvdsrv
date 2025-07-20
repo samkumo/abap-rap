@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition'
+define service ZUI_TASK_LIST {
+  expose Z02R_TASK_LIST;
+}

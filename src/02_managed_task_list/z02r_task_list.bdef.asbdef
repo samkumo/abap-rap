@@ -1,0 +1,32 @@
+managed; //implementation in class zbp_02r_task_list unique;
+//strict ( 2 );
+
+define behavior for Z02R_TASK_LIST //alias <alias_name>
+persistent table z02_task_list
+lock master
+//authorization master ( instance )
+etag master ChangedAt
+{
+  field ( mandatory ) Description, DueDate;
+  field ( readonly, numbering : managed) Id;
+  field ( readonly ) createdAt, createdby, changedAt, changedBy;
+
+
+  create;
+  update;
+  delete;
+
+  // Define the mappings from CDS view back to DB-Table
+  mapping for z02_task_list
+  {
+    Id = id;
+    Description = description;
+    Status = status;
+    DueDate = due_date;
+    Deleted = deleted;
+    CreatedAt = created_at;
+    CreatedBy = created_by;
+    ChangedAt = changed_at;
+    ChangedBy = changed_by;
+  }
+}
