@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SKTD" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SKTD>
+    <METADATA>
+     <DESCRIPTION>Documentation for $02_MANAGED_TASK_LIST</DESCRIPTION>
+     <LANGUAGE>EN</LANGUAGE>
+     <ABAP_LANGU_VERSION>0</ABAP_LANGU_VERSION>
+    </METADATA>
+    <REF_OBJECT>
+     <TYPE>DEVC/K</TYPE>
+     <NAME>$02_MANAGED_TASK_LIST</NAME>
+    </REF_OBJECT>
+    <ELEMENTS>
+     <item>
+      <ID>$02_MANAGED_TASK_LIST</ID>
+      <REF>
+       <URI>/sap/bc/adt/packages/%2402_managed_task_list</URI>
+       <TYPE>DEVC/K</TYPE>
+       <NAME>$02_MANAGED_TASK_LIST</NAME>
+       <DESCRIPTION>RAP Managed scenario</DESCRIPTION>
+      </REF>
+      <TEXT>IyBUYXNrIGRlc2NyaXB0aW9uCiAgCiAgIE1hbmFnZWQgdHJhbnNhY3Rpb25hbCBhcHAKCTEuIENy
+ZWF0ZSBaLVRhYmxlIGZvciB0YXNrcyB3aGljaCBzaG91bGQgY29udGFpbiB0aGUgZm9sbG93aW5n
+IGZpZWxkczogWyBJRCwgRGVzY3JpcHRpb24sIFN0YXR1cywgRHVlIERhdGUgfQoJMi4gQ3JlYXRl
+IHRoZSBuZWNlc3NhcnkgQ0RTIHZpZXdzCgkzLiBFeHBvc2UgdGhlIGNvbnRlbnRzIHRocm91Z2gg
+T0RhdGFWNCBzZXJ2aWNlCgk0LiBBZGQgYmVoYXZpb3IgZGVmaW5pdGlvbiB0byBlbmFibGUgQ1JF
+QVRFLCBVUERBVEUgYW5kIERFTEVURSBvcGVyYXRpb25zCgk1LiBBZGQgZGV0ZXJtaW5hdGlvbiB0
+aGF0IGF1dG9tYXRpY2FsbHkgc2V0cyBTdGF0dXMgdG8gJ09wZW4nIHdoZW4gbmV3IHRhc2sgaXMg
+Y3JlYXRlZAoJNi4gVmFsaWRhdGlvbiB0byBjaGVjayB0aGF0IER1ZSBEYXRlIGlzIGFsd2F5cyBp
+biB0aGUgZnV0dXJlCgoKTk9URVM6CkZvciBDUkVBVEUgYW5kIFVQREFURSBvcGVyYXRpb25zLCBP
+RGF0YVYyIG11c3QgYmUgdXNlZCBpbiBub24tZHJhZnQgc2NlbmFyaW8=</TEXT>
+      <CAN_HAVE_DOCUMENTATION>X</CAN_HAVE_DOCUMENTATION>
+      <LINKS>
+       <item>
+        <HREF>/sap/bc/adt/repository/informationsystem/elementinfo?path=$02_managed_task_list&amp;type=devc/k</HREF>
+        <REL>http://www.sap.com/adt/relations/elementinfo</REL>
+        <TYPE>application/vnd.sap.adt.elementinfo+xml</TYPE>
+        <TITLE>Show Element Information</TITLE>
+       </item>
+      </LINKS>
+      <SHORTTEXT_OBLIGATION>forbidden</SHORTTEXT_OBLIGATION>
+      <LONGTEXT_OBLIGATION>optional</LONGTEXT_OBLIGATION>
+     </item>
+    </ELEMENTS>
+   </SKTD>
+  </asx:values>
+ </asx:abap>
+</abapGit>
