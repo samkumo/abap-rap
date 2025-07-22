@@ -1,0 +1,29 @@
+managed implementation in class zbp_03i_project_task unique;
+//strict ( 2 );
+
+define behavior for Z03I_PROJECT_TASK //alias <alias_name>
+persistent table z03_project_task
+lock master
+//authorization master ( instance )
+etag master ChangedAt
+{
+  field ( readonly, numbering : managed ) Id;
+  field ( readonly ) ProjectId, CreatedAt, CreatedBy, ChangedAt, ChangedBy;
+
+  create;
+  update;
+  delete;
+
+  determination setDefaultStatus on modify { create; }
+
+  mapping for z03_project_task
+    {
+      Id          = id;
+      Description = description;
+      Status      = status;
+      CreatedAt   = created_at;
+      CreatedBy   = created_by;
+      ChangedAt   = changed_at;
+      ChangedBy   = changed_by;
+    }
+}

@@ -1,0 +1,26 @@
+managed implementation in class zbp_03i_project unique;
+//strict ( 2 );
+
+define behavior for Z03I_project //alias <alias_name>
+persistent table z03_project
+lock master
+//authorization master ( instance )
+etag master ChangedAt
+{
+  field ( readonly, numbering : managed ) Id;
+  field ( readonly ) CreatedAt, CreatedBy, ChangedAt, ChangedBy;
+
+  create;
+  update;
+  delete;
+  mapping for z03_project
+    {
+      Id        = id;
+      Name      = name;
+      StartDate = start_date;
+      CreatedAt = created_at;
+      CreatedBy = created_by;
+      ChangedAt = changed_at;
+      ChangedBy = changed_by;
+    }
+}
