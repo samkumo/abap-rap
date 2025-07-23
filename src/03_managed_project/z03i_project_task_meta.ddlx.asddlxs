@@ -1,0 +1,64 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Task',
+    typeNamePlural: 'Tasks',
+    title: {
+        type: #STANDARD,
+        value: 'Description'
+        }
+    }
+
+annotate entity Z03I_PROJECT_TASK with
+{
+  @UI.facet: [{
+      id: 'TASK',
+      purpose: #STANDARD,
+      position: 10,
+      label: 'Task Details',
+      type: #IDENTIFICATION_REFERENCE
+  },
+  { id: 'DESCRIPTION',
+    label: 'Description',
+    position: 20
+  },
+  {
+    id: 'STATUS',
+    label: 'Status',
+    position: 30
+  }]
+  @UI:{ lineItem:       [ { position: 10, label: 'Project ID' } ],
+        identification: [ { position: 10, label: 'Project ID' } ],
+        hidden: true
+  }
+  ProjectId;
+  @UI:{ lineItem:       [ { position: 20, label: 'Task ID' } ],
+        identification: [ { position: 20, label: 'Task ID' } ],
+        hidden: true
+  }
+  Id;
+  @UI:{ lineItem:       [ { position: 30, label: 'Description' } ],
+        identification: [ { position: 30, label: 'Description' } ]
+  }
+  Description;
+  @UI:{ lineItem:       [ { position: 40, label: 'Status' } ],
+        identification: [ { position: 40, label: 'Status' } ]
+  }
+  Status;
+  @UI:{ lineItem:       [ { position: 50, label: 'Created At' } ],
+        identification: [ { position: 50, label: 'Created At' } ]
+
+  }
+  CreatedAt;
+  @UI:{ lineItem:       [ { position: 60, label: 'Created By' } ],
+        identification: [ { position: 60, label: 'Created By' } ]
+  }
+  CreatedBy;
+  @UI:{ lineItem:       [ { position: 70, label: 'Changed At' } ],
+        identification: [ { position: 70, label: 'Changed At' } ]
+  }
+  ChangedAt;
+  @UI:{ lineItem:       [ { position: 80, label: 'Changed By' } ],
+        identification: [ { position: 80, label: 'Changed By' } ]
+  }
+  ChangedBy;
+}

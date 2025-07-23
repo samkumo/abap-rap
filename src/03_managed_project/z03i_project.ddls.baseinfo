@@ -6,7 +6,9 @@
 "Z03R_PROJECT"
 ],
 "ASSOCIATED":
-[],
+[
+"Z03I_PROJECT_TASK"
+],
 "BASE":
 [],
 "ANNO_REF":

@@ -7,7 +7,9 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
+@Metadata.allowExtensions: true
 define root view entity Z03I_project as select from Z03R_PROJECT
+composition [0..*] of Z03I_PROJECT_TASK as _Task
 {
     key Id,
     Name,
@@ -15,5 +17,9 @@ define root view entity Z03I_project as select from Z03R_PROJECT
     CreatedAt,
     CreatedBy,
     ChangedAt,
-    ChangedBy
+    ChangedBy,
+    
+    //Composition of child Tasks
+    _Task
+    
 }

@@ -7,7 +7,9 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
-define root view entity Z03I_PROJECT_TASK as select from Z03R_PROJECT_TASK
+@Metadata.allowExtensions: true
+define view entity Z03I_PROJECT_TASK as select from Z03R_PROJECT_TASK
+association to parent Z03I_project as _Project on _Project.Id = $projection.ProjectId
 {
     key ProjectId,
     key Id,
@@ -16,5 +18,8 @@ define root view entity Z03I_PROJECT_TASK as select from Z03R_PROJECT_TASK
     CreatedAt,
     CreatedBy,
     ChangedAt,
-    ChangedBy
+    ChangedBy,
+    
+    //Association to parent Project
+    _Project
 }

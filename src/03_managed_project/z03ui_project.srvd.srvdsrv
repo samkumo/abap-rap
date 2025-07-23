@@ -1,0 +1,4 @@
+@EndUserText.label: 'Project SD'
+define service Z03ui_project {
+  expose Z03I_project;
+}

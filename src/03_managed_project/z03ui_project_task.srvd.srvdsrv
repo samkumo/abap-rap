@@ -1,0 +1,4 @@
+@EndUserText.label: 'Project task SD'
+define service Z03ui_project_task {
+  expose Z03I_PROJECT_TASK;
+}

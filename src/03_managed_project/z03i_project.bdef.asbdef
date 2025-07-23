@@ -9,10 +9,13 @@ etag master ChangedAt
 {
   field ( readonly, numbering : managed ) Id;
   field ( readonly ) CreatedAt, CreatedBy, ChangedAt, ChangedBy;
+  field ( mandatory: create) Name;
 
   create;
   update;
   delete;
+
+  association _Task { create; }
   mapping for z03_project
     {
       Id        = id;
